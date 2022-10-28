@@ -46,10 +46,17 @@ void testCaseFive()
 void testCaseSix()
 {
     obj.openFile("src/urinals.dat");
-    Assertions.assertEquals( 3 , obj.list.size());
+    Assertions.assertEquals( 3 , obj.inputs.size());
     System.out.println("====== Rohith Reddy == TEST one passed for open file=======");
 }
 
+@Test
+void testCaseSeven()
+{
+    obj.writeFile("src/list.dat");
+    Assertions.assertEquals( 3, obj.outputs.size());
+    System.out.println("====== Rohith Reddy == TEST one passed for write file=======");
+}
 
 
 }

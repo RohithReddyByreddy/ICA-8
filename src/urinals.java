@@ -6,7 +6,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.*;
 public class urinals {
-    public List<String> list=new ArrayList<String>();
+    public List<String> inputs=new ArrayList<String>();
+    public List<String> outputs=new ArrayList<String>();
     boolean goodString(String str)
     {
         //verify that string is in correct format or not
@@ -73,12 +74,13 @@ public class urinals {
     }
     void openFile(String path)
     {
+        //Open the file
         try{
             File myObj = new File(path);
             Scanner myReader = new Scanner(myObj);
             while (myReader.hasNextLine()) {
                 String data = myReader.nextLine();
-                list.add(data);
+                inputs.add(data);
             }
             myReader.close();
         }
@@ -86,6 +88,12 @@ public class urinals {
             System.out.println("An error occurred.");
             e.printStackTrace();
         }
+    }
+
+    void writeFile(String path)
+    {
+        //the function should write output to th file
+        System.out.println("not implemented");
     }
 
     public static void main(String[] args)
