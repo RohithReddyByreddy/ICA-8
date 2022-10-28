@@ -14,7 +14,19 @@ urinals obj=new urinals();
 void testCaseOne()
 {
     Assertions.assertEquals( true , obj.goodString("0010"));
-    System.out.println("====== Rohith Reddy == TEST one passed =======");
+    System.out.println("====== Rohith Reddy == TEST one passed for goodString=======");
+}
+@Test
+void testCaseTwo()
+{
+    Assertions.assertEquals( false , obj.goodString("011000"));
+    System.out.println("====== Rohith Reddy == TEST two passed for goodString=======");
+}
+@Test
+void testCaseThree()
+{
+    Assertions.assertEquals( 1 , obj.countUrinals("0010"));
+    System.out.println("====== Rohith Reddy == TEST one passed for countY=Urinals=======");
 }
 
 

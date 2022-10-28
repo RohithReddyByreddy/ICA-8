@@ -18,6 +18,12 @@ public class urinals {
         }
         return good;
     }
+    int countUrinals(String str)
+    {
+        //counts the free urinals
+        System.out.println("NOT implemented");
+        return -1;
+    }
 
     public static void main(String[] args)
     {
