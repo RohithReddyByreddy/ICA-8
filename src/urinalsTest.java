@@ -10,9 +10,12 @@ import org.junit.jupiter.api.Test;
 public class urinalsTest {
 urinals obj=new urinals();
 
+@Test
 void testCaseOne()
 {
-
+    Assertions.assertEquals( true , obj.goodString("0110"));
+    System.out.println("====== Rohith Reddy == TEST one passed =======");
 }
+
 
 }
