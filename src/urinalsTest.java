@@ -6,6 +6,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class urinalsTest {
 urinals obj=new urinals();
@@ -45,7 +46,7 @@ void testCaseFive()
 @Test
 void testCaseSix()
 {
-    obj.openFile("src/urinals.dat");
+    obj.openFile("urinals.dat");
     Assertions.assertEquals( 4 , obj.inputs.size());
     System.out.println("====== Rohith Reddy == TEST one passed for open file=======");
 }
@@ -58,6 +59,17 @@ void testCaseSeven()
     Assertions.assertEquals( obj.inputs.size(), obj.outputs.size());
     System.out.println("====== Rohith Reddy == TEST one passed for write file=======");
 }
+
+@Test
+void TestIoExecption()
+{
+    RuntimeException thrown = assertThrows(
+            RuntimeException.class,
+            () -> obj.openFile("urinalsdgysuas.dat"),
+            "throw error"
+    );
+}
+
 
 
 }

@@ -86,8 +86,7 @@ public class urinals {
             myReader.close();
         }
         catch (FileNotFoundException e) {
-            System.out.println("An error occurred.");
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 

@@ -24,14 +24,27 @@ If input is the keyboard, print the results to the screen. If input is from a fi
 exists, increment a counter and rename the file using the following rule pattern:  rule1.txt, rule2.txt, etc. The output is 
 JUST THE NUMBER of free urinals.
   
-Examples
+Test Examples
 
-10001 returns 1 (10101) 
+10001 returns 1  
 
-1001 returns 0 (1001) 
+1001 returns 0 
 
-00000 returns 3 (10101) 
+00000 returns 3 
 
-0000 returns 2 (1001) 
+0000 returns 2  
 
-01000 returns 1 (01010 or 01001) 
+01000 returns 1 
+
+src/ contains main and test java files.
+Main
+
+Select method through which you want to give input 
+1.command line
+2.text file
+For CMD input Urinals count is displayed on screen
+For Files then output is generated in src/ folder with incrementing number appended to file. If multiple Files are present, file with (rule(X).txt) highest X value is the latest output.
+Test
+
+Execute test in IntelliJ and all the test cases will be passed. If input is changed then test case need to be written
+
