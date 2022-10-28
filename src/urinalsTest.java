@@ -61,7 +61,7 @@ void testCaseSeven()
 }
 
 @Test
-void TestIoExecption()
+void TestFileNotFoundExecption()
 {
     RuntimeException thrown = assertThrows(
             RuntimeException.class,
@@ -69,7 +69,15 @@ void TestIoExecption()
             "throw error"
     );
 }
-
+    @Test
+    void TestIOExecption()
+    {
+        RuntimeException thrown = assertThrows(
+                RuntimeException.class,
+                () -> obj.openFile("urinalsdgysuas.dat"),
+                "throw error"
+        );
+    }
 
 
 }

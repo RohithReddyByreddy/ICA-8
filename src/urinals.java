@@ -88,6 +88,10 @@ public class urinals {
         catch (FileNotFoundException e) {
             throw new RuntimeException(e);
         }
+        catch (IOException e)
+        {
+            throw new RuntimeException(e);
+        }
     }
 
     void writeFile(String path)
