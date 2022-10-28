@@ -2,12 +2,12 @@
 Author : Rohith Reddy Byreddy
 AsuId : rbyreddy@asu.edu
  */
-import java.io.File;
+import java.io.*;
 import java.io.FileNotFoundException;
 import java.util.*;
 public class urinals {
     public List<String> inputs=new ArrayList<String>();
-    public List<String> outputs=new ArrayList<String>();
+    public List<Integer> outputs=new ArrayList<Integer>();
     boolean goodString(String str)
     {
         //verify that string is in correct format or not
@@ -93,7 +93,38 @@ public class urinals {
     void writeFile(String path)
     {
         //the function should write output to th file
-        System.out.println("not implemented");
+        for (String i : inputs){
+            outputs.add(countUrinals(i));
+        }
+        try {
+            File myObj = new File(path);
+            int i=0;
+            while(myObj.exists())
+            {
+                if(i==0)
+                {
+                    path="src/rule1.txt";
+                }
+                else
+                {
+                    int tr=path.indexOf(Integer.toString(i));
+                    path=path.substring(0,tr)+Integer.toString(i+1)+path.substring(tr+1,path.length());
+                }
+                myObj = new File(path);
+                i++;
+            }
+            myObj.createNewFile();
+            FileWriter myWriter = new FileWriter(path);
+            for (int j : outputs)
+            {
+                myWriter.write(Integer.toString(j)+"\n");
+            }
+            myWriter.close();
+        }
+        catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args)
