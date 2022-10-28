@@ -85,8 +85,15 @@ void TestFileNotFoundExecption()
         Assertions.assertEquals( 0,obj.inputs.size());
         System.out.println("Rohith Reddy Byreddy --- File has 0 inputs");
     }
-
-    
+    @Test
+    void TestIOExecptionWrite()
+    {
+        RuntimeException thrown = assertThrows(
+                RuntimeException.class,
+                () -> obj.writeFile("src/rule3332.txt"),
+                "throw error"
+        );
+    }
 
 
 
