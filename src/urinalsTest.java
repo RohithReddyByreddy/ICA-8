@@ -25,7 +25,20 @@ void testCaseTwo()
 @Test
 void testCaseThree()
 {
-    Assertions.assertEquals( 1 , obj.countUrinals("0010"));
+    Assertions.assertEquals( 1 , obj.countUrinals("100001"));
+    System.out.println("====== Rohith Reddy == TEST one passed for countY=Urinals=======");
+}
+
+@Test
+void testCaseFour()
+{
+    Assertions.assertEquals( 2 , obj.countUrinals("10000"));
+    System.out.println("====== Rohith Reddy == TEST one passed for countY=Urinals=======");
+}
+@Test
+void testCaseFive()
+{
+    Assertions.assertEquals( -1 , obj.countUrinals("110001"));
     System.out.println("====== Rohith Reddy == TEST one passed for countY=Urinals=======");
 }
 
