@@ -13,7 +13,7 @@ urinals obj=new urinals();
 @Test
 void testCaseOne()
 {
-    Assertions.assertEquals( true , obj.goodString("0110"));
+    Assertions.assertEquals( true , obj.goodString("0010"));
     System.out.println("====== Rohith Reddy == TEST one passed =======");
 }
 
