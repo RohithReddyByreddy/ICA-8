@@ -79,5 +79,16 @@ void TestFileNotFoundExecption()
         );
     }
 
+    @Test
+    void EmptyFileTest()
+    {
+        Assertions.assertEquals( 0,obj.inputs.size());
+        System.out.println("Rohith Reddy Byreddy --- File has 0 inputs");
+    }
+
+    
+
+
+
 
 }
