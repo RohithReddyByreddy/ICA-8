@@ -82,6 +82,7 @@ void TestFileNotFoundExecption()
     @Test
     void EmptyFileTest()
     {
+        obj.openFile("urinals.dat");
         Assertions.assertEquals( 0,obj.inputs.size());
         System.out.println("Rohith Reddy Byreddy --- File has 0 inputs");
     }
@@ -90,7 +91,7 @@ void TestFileNotFoundExecption()
     {
         RuntimeException thrown = assertThrows(
                 RuntimeException.class,
-                () -> obj.writeFile("src/rule3332.txt"),
+                () -> obj.writeFile("src/rule.txt"),
                 "throw error"
         );
     }
