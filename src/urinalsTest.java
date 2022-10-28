@@ -26,21 +26,30 @@ void testCaseTwo()
 void testCaseThree()
 {
     Assertions.assertEquals( 1 , obj.countUrinals("100001"));
-    System.out.println("====== Rohith Reddy == TEST one passed for countY=Urinals=======");
+    System.out.println("====== Rohith Reddy == TEST one passed for count Urinals=======");
 }
 
 @Test
 void testCaseFour()
 {
     Assertions.assertEquals( 2 , obj.countUrinals("10000"));
-    System.out.println("====== Rohith Reddy == TEST one passed for countY=Urinals=======");
+    System.out.println("====== Rohith Reddy == TEST two passed for count Urinals=======");
 }
 @Test
 void testCaseFive()
 {
     Assertions.assertEquals( -1 , obj.countUrinals("110001"));
-    System.out.println("====== Rohith Reddy == TEST one passed for countY=Urinals=======");
+    System.out.println("====== Rohith Reddy == TEST three passed for count Urinals=======");
 }
+
+@Test
+void testCaseSix()
+{
+    obj.openFile("src/urinals.dat");
+    Assertions.assertEquals( 3 , obj.list.size());
+    System.out.println("====== Rohith Reddy == TEST one passed for open file=======");
+}
+
 
 
 }

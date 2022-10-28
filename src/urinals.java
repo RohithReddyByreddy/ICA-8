@@ -2,8 +2,11 @@
 Author : Rohith Reddy Byreddy
 AsuId : rbyreddy@asu.edu
  */
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.*;
 public class urinals {
+    public List<String> list=new ArrayList<String>();
     boolean goodString(String str)
     {
         //verify that string is in correct format or not
@@ -67,6 +70,22 @@ public class urinals {
 
 
         return count;
+    }
+    void openFile(String path)
+    {
+        try{
+            File myObj = new File(path);
+            Scanner myReader = new Scanner(myObj);
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                list.add(data);
+            }
+            myReader.close();
+        }
+        catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args)
