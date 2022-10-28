@@ -75,6 +75,7 @@ public class urinals {
     void openFile(String path)
     {
         //Open the file
+        path="src/"+path;
         try{
             File myObj = new File(path);
             Scanner myReader = new Scanner(myObj);
@@ -129,6 +130,37 @@ public class urinals {
 
     public static void main(String[] args)
     {
+        urinals u=new urinals();
+        Scanner sc=new Scanner(System.in);
+        int option;
+        String value;
+        System.out.println("Select method through which you want to give input \n1.command line\n2.text file");
+        option=sc.nextInt();
+        if(option==1)
+        {
+            while(true)
+            {
+                System.out.println("Enter the string as input or -1 for exit");
+                value=sc.next();
+                if(Integer.parseInt(value) == -1)
+                {
+                    break;
+                }
+                else
+                {
+                    System.out.println(u.countUrinals(value));
+                }
+            }
+
+        }
+        else if (option==2)
+        {
+            System.out.println("Enter the input file");
+            value=sc.next();
+            u.openFile(value);
+            u.writeFile("src/rule.txt");
+            System.out.println("Output file created");
+        }
 
     }
 }

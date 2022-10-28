@@ -53,7 +53,7 @@ void testCaseSix()
 @Test
 void testCaseSeven()
 {
-    obj.openFile("src/urinals.dat");
+    obj.openFile("urinals.dat");
     obj.writeFile("src/rule.txt");
     Assertions.assertEquals( obj.inputs.size(), obj.outputs.size());
     System.out.println("====== Rohith Reddy == TEST one passed for write file=======");
